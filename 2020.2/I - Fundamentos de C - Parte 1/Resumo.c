@@ -1,4 +1,3 @@
-// Aula 0
 // - Estrutura básica de um programa em C
 // - Entrada e Saída
 // - Estruturas Condicionais
@@ -7,9 +6,7 @@
 #include <stdio.h> // Entrada e saída padrão.
 
 // C é uma linguagem modular baseada em funções.
-int main() {
-  printf("Aula 0\n");
-
+int main(void) {
   char ch = 'A';
   int num = 100;
   printf("Ch: %c || Num: %d\n", ch, num);
