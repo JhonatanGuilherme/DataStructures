@@ -9,7 +9,6 @@ void inserir(int elemento);
 void inserir_ini(int elemento);
 void remover(int elemento);
 int buscar(int elemento);
-
 int obter(int indice);
 int tamanho(void);
 void imprimir(void);
@@ -41,13 +40,11 @@ int buscar(int elemento){
     if (l[i] == elemento)
       return i;
   }
-
   return -1;
 }
 
 void remover(int elemento){
   int p = buscar(elemento);
-
   if (p == -1)
 	  return;
  
@@ -61,7 +58,6 @@ int obter(int indice){
     printf("Indice %d fora dos limites da Lista.\n", indice);
     exit(1);
   }
-
   return l[indice];
 }
 

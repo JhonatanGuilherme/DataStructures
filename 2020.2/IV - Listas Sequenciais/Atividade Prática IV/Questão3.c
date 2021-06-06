@@ -11,7 +11,6 @@ void inserir(char *elemento);
 void inserir_ord(char *elemento);
 void remover(char *elemento);
 int buscar(char *elemento);
-
 char *obter(int indice);
 int tamanho(void);
 void imprimir(void);
@@ -23,6 +22,7 @@ int main(void) {
   inserir_ord("terceira posicao");
   inserir_ord("quarta posicao");
   inserir_ord("quinta posicao");
+
   imprimir();
 
   return 0;
@@ -45,10 +45,9 @@ void inserir_ord(char *elemento) {
       if (strcmp(l[i], elemento) >= 0)
         break;
     }
-
     for (a = pos; a > i; a--)
       l[a] = l[a - 1];
-
+    
     l[i] = (char*) malloc(sizeof(char) * MAX);
     if (!l[pos])
       exit(1);
@@ -68,13 +67,11 @@ int buscar(char *elemento) {
 
 void remover(char *elemento) {
   int p = buscar(elemento);
-
   if (p == -1)
     return;
   
   for (int i = p; i < pos; i++)
     l[i] = l[i + 1];
-
   pos--;
 }
 

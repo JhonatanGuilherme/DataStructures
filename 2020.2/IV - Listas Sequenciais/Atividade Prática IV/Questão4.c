@@ -8,11 +8,9 @@ typedef struct {
 
 void criar(Lista *list, int tam_MAX);
 void apagar(Lista *list);
-
 void inserir_ord(Lista *list, int elemento);
 void remover(Lista *list, int elemento);
 int buscar(Lista *list, int elemento);
-
 int obter(Lista *list, int indice);
 int tamanho(Lista *list);
 void imprimir(Lista *list);
@@ -54,6 +52,7 @@ void inserir_ord(Lista *list, int elemento) {
       
     for (p = list->pos; p > i; p--)
       list->arr[p] = list->arr[p - 1];
+
     list->arr[i] = elemento;
     list->pos++;
   } else
@@ -62,7 +61,6 @@ void inserir_ord(Lista *list, int elemento) {
 
 void remover(Lista *list, int elemento) {
   int p = buscar(list, elemento);
-
   if (p == -1)
 	  return;
  
